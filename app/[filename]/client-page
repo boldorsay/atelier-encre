@@ -1,0 +1,63 @@
+"use client";
+import { tinaField, useTina } from "tinacms/dist/react";
+import { TinaMarkdown } from "tinacms/dist/rich-text";
+
+// Définissons la bonne interface pour nos données
+interface PageData {
+  page: {
+    title: string | null;
+    body: any;
+    services?: {
+      serviceTitle: string | null;
+      image: string | null;
+      description: any;
+    }[];
+  }
+}
+
+interface ClientPageProps {
+  query: string;
+  variables: {
+    relativePath: string;
+  };
+  data: PageData;  // Utilisons notre nouvelle interface
+}
+
+export default function Post(props: ClientPageProps) {
+  const { data } = useTina({
+    query: props.query,
+    variables: props.variables,
+    data: props.data,
+  });
+
+  return (
+    <>
+    <h1 data - tina - field= { tinaField(data.page, "title") } >
+    { data.page.title }
+    </h1>
+
+  {/* Ajoutons la section services si elle existe */ }
+  {
+    data.page.services && (
+      <div className="services-grid" >
+      {
+        data.page.services.map((service, index) => (
+          <div 
+              key= { index }
+              className = "service-card"
+              data - tina - field={ tinaField(service, "serviceTitle") }
+        >
+        {/* ... le reste du code des services ... */ }
+        </div>
+        ))
+      }
+        </div>
+      )
+  }
+
+  <div data - tina - field={ tinaField(data.page, "body") }>
+    <TinaMarkdown content={ data.page.body } />
+      </div>
+      </>
+  );
+}

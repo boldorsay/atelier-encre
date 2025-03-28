@@ -1,0 +1,56 @@
+.warning-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.warning-box {
+    max-width: 500px;
+    padding: 3rem;
+    background-color: white;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.warning-icon {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+.warning-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.warning-message {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+.warning-highlight {
+    background: linear-gradient(to right, #ff8a00, #e52e71);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.warning-character {
+    font-size: 3rem;
+    margin: 2rem 0;
+    transform: rotate(5deg);
+    display: inline-block;
+}
+
+.warning-redirect {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 2rem;
+}

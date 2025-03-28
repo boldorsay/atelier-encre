@@ -18,13 +18,13 @@ export default function Post(props: ClientPageProps) {
     variables: props.variables,
     data: props.data,
   });
-  const content = data.post.body;
+  const content = data.page.body;
   return (
     <>
-      <h1 data-tina-field={tinaField(data.post, "title")}>
-        {data.post.title}
+      <h1 data-tina-field={tinaField(data.page, "title")}>
+        {data.page.title}
       </h1>
-      <div data-tina-field={tinaField(data.post, "body")}>
+      <div data-tina-field={tinaField(data.page, "body")}>
         <TinaMarkdown content={content} />
       </div>
     </>

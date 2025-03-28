@@ -1,0 +1,47 @@
+.services-grid {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+
+}
+
+.service-card {
+    display: flex;
+    /* Pour mettre l'image à côté du contenu */
+    background: #fff;
+}
+
+.service-image {
+    flex: 0 0 43.333%;
+    /* Prend exactement 1/3 de la largeur */
+    position: relative;
+    min-height: 200px;
+    /* Hauteur minimale fixe */
+    overflow: hidden;
+}
+
+.service-image img {
+    position: relative !important;
+    /* Surcharge la position absolute de Next/Image */
+    min-height: 400px !important;
+    height: 400px !important;
+    /* Réinitialise la hauteur */
+    width: 100% !important;
+    object-fit: cover;
+}
+
+.service-content {
+    flex: 1;
+    /* Prend le reste de l'espace */
+}
+
+.service-card h2 {
+    font-size: 1.5rem;
+    margin: 0 0 1rem 0;
+    color: #333;
+}
+
+.service-description {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.5;
+}

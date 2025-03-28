@@ -1,0 +1,49 @@
+.presentation-section {
+    margin: 5rem 0;
+}
+
+.presentation-container {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.presentation-container.image-right {
+    flex-direction: row-reverse;
+}
+
+.presentation-image {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.presentation-content {
+    flex: 1;
+}
+
+.presentation-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.presentation-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #444;
+}
+
+@media (max-width: 768px) {
+
+    .presentation-container,
+    .presentation-container.image-right {
+        flex-direction: column;
+    }
+
+    .presentation-image,
+    .presentation-content {
+        width: 100%;
+    }
+}
